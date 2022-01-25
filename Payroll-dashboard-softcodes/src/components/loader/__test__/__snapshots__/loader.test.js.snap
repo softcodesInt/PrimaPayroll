@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader Component Loader matches snapshot 1`] = `
+<div
+  className="sc-bdnylx Hpkhr"
+>
+  <span>
+    <svg>
+      loading.svg
+    </svg>
+    <h3
+      data-testid="loading-text"
+    >
+      Loading
+    </h3>
+  </span>
+</div>
+`;

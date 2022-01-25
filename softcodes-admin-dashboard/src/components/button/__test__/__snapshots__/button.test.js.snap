@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component Button matches snapshot 1`] = `
+<button
+  className="sc-bdnylx kVNLp button btn-delay"
+  data-testid="button"
+  disabled={true}
+  type="submit"
+  width="20px"
+>
+   
+  Button
+   
+</button>
+`;

@@ -1,0 +1,14 @@
+/**
+ * Actions
+ * Object
+ */
+const SubsidiaryStructure = {
+	ADD_SUBSIDIARY: 'ADD_SUBSIDIARY',
+	GET_SUBSIDIARY: 'GET_SUBSIDIARY',
+	DEACTIVATE_SUBSIDIARY: 'DEACTIVATE_SUBSIDIARY',
+	EDIT_SUBSIDIARY: 'EDIT_SUBSIDIARY',
+	GET_BY_ID: 'GET_BY_ID',
+	GET_ERROR: 'GET_ERROR',
+};
+
+export default SubsidiaryStructure;

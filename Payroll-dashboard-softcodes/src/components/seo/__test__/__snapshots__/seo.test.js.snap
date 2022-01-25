@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SEO Component SEO matches snapshot 1`] = `null`;
+
+exports[`SEO Component SEO matches snapshot with no text 1`] = `null`;

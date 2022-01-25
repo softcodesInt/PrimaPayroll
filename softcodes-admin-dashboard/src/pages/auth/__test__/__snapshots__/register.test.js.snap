@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register Component Register matches data snapshot 1`] = `
+<div
+  className="sc-bdnylx TyOEk"
+>
+  <div
+    className="grid_layout d-block d-md-grid"
+  >
+    <div
+      className="grid-1 d-flex"
+    >
+      <div
+        className="child__item container"
+        data-testid="auth-layout"
+      >
+        <svg
+          className="mb-4"
+        >
+          logos.png
+        </svg>
+        <div
+          className="sc-gtssRu fFscfI"
+        >
+          <h3>
+            Create account
+          </h3>
+          <p
+            className="intro__text"
+          >
+            Enter your details to get started
+          </p>
+          <form
+            onSubmit={[Function]}
+          >
+            <div
+              className="sc-dlnjPT iokasi"
+              data-testid="input"
+            >
+              <label
+                htmlFor="Name"
+              >
+                Name
+              </label>
+              <input
+                className="form-control"
+                data-testid="inputs"
+                id="name"
+                name="name"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Enter your full name"
+                type="text"
+                value=""
+              />
+            </div>
+            <div
+              className="sc-dlnjPT iokasi"
+              data-testid="input"
+            >
+              <label
+                htmlFor="Email address"
+              >
+                Email address
+              </label>
+              <input
+                className="form-control"
+                data-testid="inputs"
+                id="email"
+                name="email"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Enter email address"
+                type="email"
+                value=""
+              />
+            </div>
+            <div
+              className="sc-dlnjPT iokasi"
+              data-testid="input"
+            >
+              <label
+                htmlFor="Password"
+              >
+                Password
+              </label>
+              <input
+                className="form-control"
+                data-testid="inputs"
+                id="password"
+                name="password"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Enter password"
+                type="password"
+                value=""
+              />
+              <button
+                className="input-icon "
+                onClick={[Function]}
+                type="button"
+              >
+                <svg>
+                  eye.svg
+                </svg>
+              </button>
+            </div>
+            <div
+              className="sc-dlnjPT iokasi"
+              data-testid="input"
+            >
+              <label
+                htmlFor="Confirm Password"
+              >
+                Confirm Password
+              </label>
+              <input
+                className="form-control"
+                data-testid="inputs"
+                id="confirmPassword"
+                name="confirmPassword"
+                onChange={[Function]}
+                placeholder="Confirm Password"
+                type="password"
+                value=""
+              />
+              <button
+                className="input-icon "
+                onClick={[Function]}
+                type="button"
+              >
+                <svg>
+                  eye.svg
+                </svg>
+              </button>
+            </div>
+            <button
+              className="sc-eCApGN kWDGQg button btn-developp btn-block"
+              data-testid="button"
+              disabled={false}
+              type="submit"
+              width=""
+            >
+               
+              Create account
+               
+            </button>
+          </form>
+          <p
+            className="intro__link-link-out"
+          >
+            Already have an account? 
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              Login
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid-2 d-none d-md-block"
+    >
+      <img
+        alt="layout banner"
+        src="Body.png"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,11 @@
+{% extends 'emails/base.html' %}
+{% block content %}
+
+<center>
+<h5>Hello, {{ user }} </h5>
+<p>{{ created_by }} assigned you to {{ company }} company</p>
+    <p>Login to see the {{ company }} at the sidebar of your profile under <strong>Companies Managing</strong></p>
+</center>
+
+<br />
+{% endblock %}

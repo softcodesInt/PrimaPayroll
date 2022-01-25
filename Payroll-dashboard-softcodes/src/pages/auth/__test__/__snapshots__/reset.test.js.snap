@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reset Component Reset matches data snapshot 1`] = `
+<div
+  className="sc-hKFyIo gSJtJX"
+>
+  <div
+    className="grid_layout d-block d-md-grid"
+  >
+    <div
+      className="grid-1 d-flex"
+    >
+      <div
+        className="child__item container"
+        data-testid="auth-layout"
+      >
+        <svg
+          className="mb-4"
+        >
+          logos.png
+        </svg>
+        <div
+          className="sc-eCApGN bxhqDO"
+        >
+          <h3>
+            Create new password
+          </h3>
+          <p
+            className="intro__text"
+          >
+            Set new password for your account
+          </p>
+          <form
+            onSubmit={[Function]}
+          >
+            <div
+              className="sc-bdnylx edIswL"
+              data-testid="input"
+            >
+              <label
+                htmlFor="Type New Password"
+              >
+                Type New Password
+              </label>
+              <input
+                className="form-control"
+                data-testid="inputs"
+                id="password"
+                name="password"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Type New Password"
+                type="password"
+                value=""
+              />
+              <button
+                className="input-icon "
+                onClick={[Function]}
+                type="button"
+              >
+                <svg>
+                  eye.svg
+                </svg>
+              </button>
+            </div>
+            <div
+              className="sc-bdnylx edIswL"
+              data-testid="input"
+            >
+              <label
+                htmlFor="Confirm New Password"
+              >
+                Confirm New Password
+              </label>
+              <input
+                className="form-control"
+                data-testid="inputs"
+                id="newPassword"
+                name="newPassword"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Confirm New Password"
+                type="password"
+                value=""
+              />
+              <button
+                className="input-icon "
+                onClick={[Function]}
+                type="button"
+              >
+                <svg>
+                  eye.svg
+                </svg>
+              </button>
+            </div>
+            <button
+              className="sc-dlnjPT eCNwlC button btn-developp btn-block"
+              data-testid="button"
+              disabled={false}
+              type="submit"
+              width=""
+            >
+               
+              Create new password
+               
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid-2 d-none d-md-block"
+    >
+      <img
+        alt="layout banner"
+        src="Body.png"
+      />
+    </div>
+  </div>
+</div>
+`;

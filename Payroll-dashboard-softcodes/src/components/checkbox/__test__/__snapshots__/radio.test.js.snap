@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio Component Radio matches snapshot checked 1`] = `
+<div
+  className="sc-bdnylx fDdidn"
+>
+  <label
+    className="sc-gtssRu gMQUao"
+  >
+    <span>
+       
+      First Radio
+    </span>
+    <input
+      checked={true}
+      data-testid="radio"
+      name="radio"
+      onChange={[Function]}
+      type="radio"
+      value="radio"
+    />
+    <span
+      className="checkmark"
+    />
+  </label>
+</div>
+`;
+
+exports[`Radio Component Radio matches snapshot when not checked 1`] = `
+<div
+  className="sc-bdnylx cFFCzv"
+>
+  <label
+    className="sc-gtssRu gMQUao"
+  >
+    <span>
+       
+      First Radio
+    </span>
+    <input
+      checked={false}
+      data-testid="radio"
+      name="radio"
+      onChange={[Function]}
+      type="radio"
+      value="radio"
+    />
+    <span
+      className="checkmark"
+    />
+  </label>
+</div>
+`;

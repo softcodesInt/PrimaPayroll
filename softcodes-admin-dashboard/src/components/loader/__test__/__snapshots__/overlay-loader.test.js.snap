@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Overlay Loader Component Overlay Loader matches snapshot 1`] = `
+Array [
+  " ",
+  <div
+    className="sc-bdnylx GCHgv"
+  >
+    <span>
+      <svg>
+        loading.svg
+      </svg>
+      <h3
+        data-testid="overlay-text"
+      >
+        Loading
+      </h3>
+    </span>
+  </div>,
+]
+`;

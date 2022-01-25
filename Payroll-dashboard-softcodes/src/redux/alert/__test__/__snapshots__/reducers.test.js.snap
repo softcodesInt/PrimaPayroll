@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert Reducer removes alert 1`] = `Array []`;
+
+exports[`Alert Reducer returns the correct state when alert is Error 1`] = `
+Array [
+  Object {
+    "alertType": "error",
+    "id": "34sdvsdf2e23",
+    "msg": "An Error Occured.",
+  },
+]
+`;
+
+exports[`Alert Reducer returns the correct state when alert is success 1`] = `
+Array [
+  Object {
+    "alertType": "success",
+    "id": "34sdvsdf2e23",
+    "msg": "Successfully rendered actiom",
+  },
+]
+`;

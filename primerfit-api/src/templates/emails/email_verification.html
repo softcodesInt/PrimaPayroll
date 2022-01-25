@@ -1,0 +1,15 @@
+{% extends 'emails/base.html' %}
+{% block content %}
+
+<center>
+<h5>Hello, {{ user }} </h5>
+<p>{{ invitee }} invited you to join PrimerFit as a staff</p>
+
+<br /><br />
+<a href="{{ setup_link }}" style="background: #3286D4;
+border-radius: 10px; padding: 16px; color:#FFFFFF; text-align: center; text-decoration: none">Setup Password</a>
+    </center>
+<br /><br />
+
+<br />
+{% endblock %}

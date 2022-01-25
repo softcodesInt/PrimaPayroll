@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Component Input matches snapshot 1`] = `
+<div
+  className="sc-bdnylx cUrMpJ"
+  data-testid="input"
+>
+  <label
+    htmlFor="text"
+  >
+    text
+  </label>
+  <input
+    className="form-control"
+    data-testid="inputs"
+    id="input"
+    onChange={[Function]}
+    placeholder="Enter Text Here"
+    type="text"
+    value="12345"
+  />
+</div>
+`;
+
+exports[`Input Component Input matches snapshot when type is password 1`] = `
+<div
+  className="sc-bdnylx cUrMpJ"
+  data-testid="input"
+>
+  <label
+    htmlFor="text"
+  >
+    text
+  </label>
+  <input
+    className="form-control"
+    data-testid="inputs"
+    id="input"
+    onChange={[Function]}
+    placeholder="Enter Text Here"
+    type="password"
+    value="12345"
+  />
+  <button
+    className="input-icon "
+    onClick={[Function]}
+    type="button"
+  >
+    <svg>
+      eye.svg
+    </svg>
+  </button>
+  <span
+    className="sc-gtssRu kbMXaR error"
+    color="#f66262"
+    fontSize="12px"
+  >
+    Fill Input Out
+  </span>
+</div>
+`;

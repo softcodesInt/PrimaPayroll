@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alerts Action Dispatches the correct action and payload for removing alerts 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "alertType": "error",
+      "id": 1,
+      "msg": "An Error Occured",
+    },
+    "type": "SET_ALERT",
+  },
+  Object {
+    "payload": 1,
+    "type": "REMOVE_ALERT",
+  },
+]
+`;
+
+exports[`Alerts Action Dispatches the correct action and payload for setting alerts 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "alertType": "error",
+      "id": 1,
+      "msg": "An Error Occured",
+    },
+    "type": "SET_ALERT",
+  },
+]
+`;

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alerts Component Alerts matches data snapshot 1`] = `
+<div
+  className="fade sc-bdnylx cozTYj alert show"
+  data-testid="alerts"
+  role="alert"
+>
+  <div
+    className="fade alert alert-danger show"
+    role="alert"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      ✕
+    </button>
+    <p
+      className="alert--flex d-flex align-items-center"
+    >
+      <svg>
+        error.svg
+      </svg>
+      <span>
+        Error
+         
+      </span>
+    </p>
+  </div>
+</div>
+`;

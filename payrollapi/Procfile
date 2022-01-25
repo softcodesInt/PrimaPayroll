@@ -1,0 +1,3 @@
+web: gunicorn --pythonpath src payrollapi.wsgi
+
+# worker: python src/manage.py rqworker default high low

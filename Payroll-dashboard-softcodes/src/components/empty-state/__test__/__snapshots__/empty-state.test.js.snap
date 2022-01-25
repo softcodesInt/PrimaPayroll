@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyState Component EmptyState matches snapshot 1`] = `
+<main
+  className="sc-bdnylx buBZqq"
+>
+  <span>
+    <svg>
+      empty-state.svg
+    </svg>
+    <h3
+      className="sc-gtssRu esDNmM"
+      data-testid="empty-state"
+    >
+      Empty
+    </h3>
+    Empty
+  </span>
+</main>
+`;
+
+exports[`EmptyState Component EmptyState matches snapshot with no text 1`] = `
+<main
+  className="sc-bdnylx buBZqq"
+>
+  <span>
+    <svg>
+      empty-state.svg
+    </svg>
+    <h3
+      className="sc-gtssRu esDNmM"
+      data-testid="empty-state"
+    >
+      Nothing here yet
+    </h3>
+    Empty
+  </span>
+</main>
+`;

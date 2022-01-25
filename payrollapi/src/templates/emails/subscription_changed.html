@@ -1,0 +1,43 @@
+{% extends 'emails/base.html' %}
+{% block content %}
+
+<h4>Hello {{ company_name }}</h4>
+<p>An update has been made to your subscription with PrimalFIT. Please check the table below to see the update.</p>
+
+<h4>Before</h4>
+<table border="2" style="border-collapse: collapse; padding: 10px; border: 1px solid #000">
+    <tbody>
+    <tr>
+        <td style="border: 1px solid #999;padding: 0.5rem;text-align: left;">Expiration Period</td>
+        <td style="border: 1px solid #999;padding: 0.5rem;text-align: left;">{{ before_expiration }}</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #999;padding: 0.5rem;text-align: left;">Number of Employees</td>
+        <td style="border: 1px solid #999;padding: 0.5rem;text-align: left;">{{ before.employee_count }}</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #999;padding: 0.5rem;text-align: left;">Access to Employee Self Service (ESS)</td>
+        <td style="border: 1px solid #999;padding: 0.5rem;text-align: left;">{% if before.bought_ess %}YES{% else %}NO{% endif %}</td>
+    </tr>
+    </tbody>
+</table>
+<br />
+<h4>After</h4>
+<table border="2" style="border-collapse: collapse; padding: 10px; border: 1px solid #000">
+    <tbody>
+    <tr>
+        <td style="border: 1px solid #999;padding: 0.5rem;text-align: left;">Expiration Period</td>
+        <td style="border: 1px solid #999;padding: 0.5rem;text-align: left;">{{ after_expiration }}</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #999;padding: 0.5rem;text-align: left;">Number of Employees</td>
+        <td style="border: 1px solid #999;padding: 0.5rem;text-align: left;">{{ after.employee_count }}</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #999;padding: 0.5rem;text-align: left;">Access to Employee Self Service (ESS)</td>
+        <td style="border: 1px solid #999;padding: 0.5rem;text-align: left;">{% if after.bought_ess %}YES{% else %}NO{% endif %}</td>
+    </tr>
+    </tbody>
+</table>
+
+{% endblock %}

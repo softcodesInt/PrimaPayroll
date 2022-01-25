@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Component Login matches data snapshot 1`] = `
+<div
+  className="sc-hKFyIo gSJtJX"
+>
+  <div
+    className="grid_layout d-block d-md-grid"
+  >
+    <div
+      className="grid-1 d-flex"
+    >
+      <div
+        className="child__item container"
+        data-testid="auth-layout"
+      >
+        <svg
+          className="mb-4"
+        >
+          logos.png
+        </svg>
+        <div
+          className="sc-eCApGN bxhqDO"
+        >
+          <h3>
+            Welcome back
+          </h3>
+          <p
+            className="intro__text"
+          >
+            Log in to continue to your account
+          </p>
+          <form
+            onSubmit={[Function]}
+          >
+            <div
+              className="sc-bdnylx edIswL"
+              data-testid="input"
+            >
+              <label
+                htmlFor="Email address"
+              >
+                Email address
+              </label>
+              <input
+                className="form-control"
+                data-testid="inputs"
+                id="email"
+                name="email"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Enter email address"
+                type="email"
+                value=""
+              />
+            </div>
+            <span
+              className="intro__link-ext"
+            >
+              <a
+                href="/forgot"
+                onClick={[Function]}
+              >
+                Forgot your password?
+              </a>
+            </span>
+            <div
+              className="sc-bdnylx edIswL"
+              data-testid="input"
+            >
+              <label
+                htmlFor="Password"
+              >
+                Password
+              </label>
+              <input
+                className="form-control"
+                data-testid="inputs"
+                id="password"
+                name="password"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Enter password"
+                type="password"
+                value=""
+              />
+              <button
+                className="input-icon "
+                onClick={[Function]}
+                type="button"
+              >
+                <svg>
+                  eye.svg
+                </svg>
+              </button>
+            </div>
+            <button
+              className="sc-dlnjPT eCNwlC button btn-developp btn-block"
+              data-testid="button"
+              disabled={false}
+              type="submit"
+              width=""
+            >
+               
+              Log in to your account
+               
+            </button>
+          </form>
+          <p
+            className="intro__link-link-out"
+          >
+            Dont have an account yet? 
+            <a
+              href="/register"
+              onClick={[Function]}
+            >
+               Get Started
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="grid-2 d-none d-md-block"
+    >
+      <img
+        alt="layout banner"
+        src="Body.png"
+      />
+    </div>
+  </div>
+</div>
+`;

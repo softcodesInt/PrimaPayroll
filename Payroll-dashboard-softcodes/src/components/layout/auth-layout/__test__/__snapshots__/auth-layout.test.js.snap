@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthLayout Component AuthLayout matches snapshot 1`] = `
+<div
+  className="sc-bdnylx TyOEk"
+>
+  <div
+    className="grid_layout d-block d-md-grid"
+  >
+    <div
+      className="grid-1 d-flex"
+    >
+      <div
+        className="child__item container"
+        data-testid="auth-layout"
+      >
+        <svg
+          className="mb-4"
+        >
+          logos.png
+        </svg>
+        AuthLayout
+      </div>
+    </div>
+    <div
+      className="grid-2 d-none d-md-block"
+    >
+      <img
+        alt="layout banner"
+        src="Body.png"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,273 @@
+{% load humanize %}
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,600,700');
+            * {
+                font-family: 'Roboto', sans-serif;
+                font-size: 12px;
+                color: #444;
+                box-sizing: border-box;
+            }
+            .spacing {
+                margin-bottom: 20px;
+            }
+            h4 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: var(--font-h3);
+                line-height: 28px;
+                letter-spacing: -0.015em;
+                margin: 0;
+                text-transform: capitalize;
+                color: #000000;
+            }
+            .capitalize {
+                text-transform: uppercase;
+                font-weight: 900
+            }
+
+            .title {
+                font-weight: 700;
+                font-size: 14px;
+            }
+            .payslip-header {
+              text-align: center;
+              background-color: rgb(240,240,240);
+              color: #000000;
+            }
+            .row {
+              margin-left:-5px;
+              margin-right:-5px;
+            }
+
+            .column {
+              float: left;
+              width: 50%;
+              padding: 5px;
+            }
+
+            /* Clearfix (clear floats) */
+            .row::after {
+              content: "";
+              clear: both;
+              display: table;
+            }
+
+            table {
+              border-collapse: collapse;
+              border-spacing: 0;
+              width: 100%;
+              border: 1px solid #ddd;
+            }
+            .no-border {
+                border: none;
+            }
+            .no-tr:nth-child(even) {
+                background-color: #ffffff;
+            }
+
+            .no-th, .no-td {
+                padding: 8px;
+            }
+
+            th, td {
+              text-align: left;
+              padding: 16px;
+            }
+
+            tr:nth-child(even) {
+              background-color: #f2f2f2;
+            }
+            .container {
+              width: 100%;
+            }
+
+            .one {
+              width: 50%;
+              float: left;
+            }
+
+            .two {
+              margin-left: 15%;
+            }
+        </style>
+</head>
+<div class="">
+    <div class="spacing">
+        <h4 class="title">Payslip</h4>
+        {% if company_logo %}
+            <img src="{{ company_logo.url }}" style="width: 60px; height: 60px; border-radius: 30px; float: right" />
+        {% endif %}
+        <h4 class="capitalize">{{ company_name }}</h4>
+        <span class="title">Pay Period: {{ payslip_date|date:"M d, Y" }}</span><br />
+    </div>
+    <div class="row">
+        <div class="column">
+            <table class="no-border">
+                <tbody>
+                <tr class="no-tr">
+                    <td class="no-td">
+                        <span class="title">Employee's Name:</span><br />
+                        <span>{{ user.get_full_name }}</span>
+                    </td>
+                </tr>
+                <tr class="no-tr">
+                    <td class="no-td">
+                        <span class="title">Employee's Code:</span><br />
+                        <span>{{ user.employee_code }}</span>
+                    </td>
+                </tr>
+                <tr class="no-tr">
+                    <td class="no-td">
+                        <span class="title">Date Engaged:</span><br />
+                        <span>{{ user.date_engaged }}</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="column">
+            <table class="no-border">
+                <tbody>
+                <tr class="no-tr">
+                    <td class="no-td">
+                        <span class="title">Job Grade:</span><br />
+                        <span>{{ user.job_grade.name }}</span>
+                    </td>
+                </tr>
+                <tr class="no-tr">
+                    <td class="no-td">
+                        <span class="title">Nature of contract:</span><br />
+                        <span>{{ user.nature_of_contract.name }}</span>
+                    </td>
+                </tr>
+                <tr class="no-tr">
+                    <td class="no-td">
+                        <span class="title">Job Title:</span><br />
+                        <span>{{ user.job_title.name }}</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+  </div>
+    <hr />
+    <div class="container">
+        <div class="one">
+            <h4 class="capitalize payslip-header">EARNINGS</h4>
+        </div>
+        <div class="two">
+            <h4 class="capitalize payslip-header">DEDUCTIONS</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for key, value in payslip_data.items %}
+                        {% if key == "earnings" %}
+                            {% for data in value %}
+                            {% if data.amount != 'None' %}
+                                <tr>
+                                    <td>{{ data.name }}</td>
+                                    <td>&#8358;{{ data.amount|floatformat:3|intcomma }}</td>
+                                </tr>
+                            {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                    <tr>
+                        <td><strong>TOTAL EARNING:</strong></td>
+                        <td><strong>&#8358;{{ gross_pay|floatformat:3|intcomma }}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="column">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for key, value in payslip_data.items %}
+                        {% if key == "deductions" %}
+                            {% for data in value %}
+                            {% if data.amount != 'None' %}
+                                <tr>
+                                    <td>{{ data.name }}</td>
+                                    <td>&#8358;{{ data.amount|floatformat:3|intcomma }}</td>
+                                </tr>
+                            {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                    <tr>
+                        <td><strong><span style="font-weight: bold; color: red">TOTAL DEDUCTION:</span></strong></td>
+                        <td><span style="font-weight: bold; color: red">&#8358;{{ total_deductions|floatformat:3|intcomma }}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <div class="one">
+            <h4 class="capitalize payslip-header">Year To Date</h4>
+        </div>
+        <div class="two">
+            <h4 class="capitalize payslip-header">Company Contribution</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <table>
+                    <thead>
+                        <tr>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tax</td>
+                            <td>&#8358;{{ tax_paid_year_to_date|floatformat:3|intcomma }}</td>
+                        </tr>
+                        <tr>
+                            <td>Taxable Income</td>
+                            <td>&#8358;{{ taxable_earnings_year_to_date|floatformat:3|intcomma }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+        <div class="column">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Employer Pension</td>
+                        <td>&#8358;{{ employer_pension|floatformat:3|intcomma }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div>
+    <p style="font-weight: bold; font-size: 13px">
+        NET PAYABLE: &#8358;{{ net_pay|floatformat:3|intcomma }}</p>
+    </div>
+</div>
+</html>
