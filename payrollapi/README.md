@@ -18,6 +18,7 @@ This Repo houses the RESTFUL APIs and the Loan decision tree
 
 * If the command line starts with $, the command should run with user privileges
 * If the command line starts with #, the command should run with root privileges
+* Code push
 
 
 #### Prerequisites
